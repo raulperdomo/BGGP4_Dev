@@ -1,4 +1,4 @@
-.text 
+.even
 .global _4 
 _4:	mov x0, #-100	
 	ldr x1, =filename
@@ -17,20 +17,13 @@ _4:	mov x0, #-100
 	mov x1, #0
 	mov x2, x10
 	mov x3, #0
-	mov x4, #576
+	mov x4, #243
 	mov x5, #0
 	mov x8, #285
 	svc 0
 
-	//ldr x1, =_4
-	//mov x2, #40
-	//mov x8, #64
-	//svc 0
-	
-	
 	mov x0, #4
 	mov x8, #93
 	svc 0
-.data
 filename:	.asciz "4"
 self: 		.asciz "/proc/self/exe"
